@@ -108,7 +108,7 @@ fun MyApp() {
             item { Spacer(Modifier.height(12.dp)) }
             item { ControlTextFieldDemo() }
             item { Spacer(Modifier.height(12.dp)) }
-            
+            item { ControlButtonDemo() }
         }
     }
 }
@@ -157,7 +157,12 @@ fun ControlTextFieldDemo() {
     OutlinedTextField(value = text, onValueChange = { text = it }, label = { Text("Ingrese texto") })
 }
 
-
+@Composable
+fun ControlButtonDemo() {
+    Button(onClick = {}, colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF6A5ACD))) {
+        Text("Presioname", color = Color.White)
+    }
+}
 
 @Preview(showBackground = true)
 @Composable
