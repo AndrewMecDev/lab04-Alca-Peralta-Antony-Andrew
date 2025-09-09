@@ -104,8 +104,11 @@ fun MyApp() {
             item { Spacer(Modifier.height(12.dp)) }
             item { ControlSwitchDemo() }
             item { Spacer(Modifier.height(12.dp)) }
+            item { ControlSliderDemo() }
             item { Spacer(Modifier.height(12.dp)) }
+            item { ControlTextFieldDemo() }
             item { Spacer(Modifier.height(12.dp)) }
+            
         }
     }
 }
@@ -138,6 +141,22 @@ fun ControlSwitchDemo() {
         Text("Switch encendido: $isOn")
     }
 }
+
+@Composable
+fun ControlSliderDemo() {
+    var value by remember { mutableFloatStateOf(0f) }
+    Column(horizontalAlignment = Alignment.CenterHorizontally) {
+        Slider(value = value, onValueChange = { value = it })
+        Text("Valor del Slider: ${"%.2f".format(value)}")
+    }
+}
+
+@Composable
+fun ControlTextFieldDemo() {
+    var text by remember { mutableStateOf("") }
+    OutlinedTextField(value = text, onValueChange = { text = it }, label = { Text("Ingrese texto") })
+}
+
 
 
 @Preview(showBackground = true)
