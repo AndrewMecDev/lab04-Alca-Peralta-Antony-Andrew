@@ -47,6 +47,7 @@ fun MyApp() {
                 .padding(16.dp),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
+            //Estoy añadiendo un comentario para el paso 5 - Andrew
             // ---------- Contenedores ----------
             item {
                 Text("📦 Contenedores", style = MaterialTheme.typography.titleLarge, fontWeight = FontWeight.Bold)
