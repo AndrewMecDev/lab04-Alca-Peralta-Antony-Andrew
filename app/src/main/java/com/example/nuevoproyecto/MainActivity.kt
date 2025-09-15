@@ -159,8 +159,8 @@ fun ControlTextFieldDemo() {
 
 @Composable
 fun ControlButtonDemo() {
-    Button(onClick = {}, colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF6A5ACD))) {
-        Text("Presioname", color = Color.White)
+    Button(onClick = {}, colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF6A5ACD)), modifier = Modifier.padding(8.dp)) {
+        Text("Presioname", color = Color.White, fontWeight = FontWeight.Bold, fontSize = 16.sp)
     }
 }
 
