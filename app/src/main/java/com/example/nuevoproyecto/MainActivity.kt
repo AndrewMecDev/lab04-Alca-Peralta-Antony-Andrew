@@ -131,6 +131,7 @@ fun ControlRadioButtonDemo() {
     Row(verticalAlignment = Alignment.CenterVertically) {
         RadioButton(selected = selected, onClick = { selected = !selected })
         Text("RadioButton activo: $selected")
+        Spacer(Modifier.width(16.dp))
     }
 }
 
@@ -141,7 +142,6 @@ fun ControlSwitchDemo() {
         Switch(checked = isOn, onCheckedChange = { isOn = it })
         Text("Switch encendido: $isOn")
         Spacer(Modifier.width(16.dp))
-
     }
 }
 
