@@ -47,7 +47,7 @@ fun MyApp() {
                 .padding(16.dp),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            //Estoy añadiendo un comentario para el paso 5 - Kelvin
+            //Estoy añadiendo un comentario para el paso 5 - Andrew
             // ---------- Contenedores ----------
             item {
                 Text("📦 Contenedores", style = MaterialTheme.typography.titleLarge, fontWeight = FontWeight.Bold)
@@ -140,6 +140,8 @@ fun ControlSwitchDemo() {
     Row(verticalAlignment = Alignment.CenterVertically) {
         Switch(checked = isOn, onCheckedChange = { isOn = it })
         Text("Switch encendido: $isOn")
+        Spacer(Modifier.width(16.dp))
+
     }
 }
 
