@@ -57,13 +57,13 @@ fun MyApp() {
                     items(5) { index ->
                         Card(
                             Modifier
-                                .padding(6.dp)
+                                .padding(9.dp)
                                 .size(80.dp)
                                 .background(Color(0xFFEADDFF)),
                             colors = CardDefaults.cardColors(containerColor = Color(0xFFB39DDB))
                         ) {
                             Box(contentAlignment = Alignment.Center, modifier = Modifier.fillMaxSize()) {
-                                Text("Item $index", color = Color.White, fontWeight = FontWeight.Bold)
+                                Text("Item $index", color = Color.White, fontWeight = FontWeight.Bold, fontSize = 16.sp)
                             }
                         }
                     }
@@ -119,7 +119,7 @@ fun MyApp() {
 fun ControlCheckboxDemo() {
     var checked by remember { mutableStateOf(false) }
     Row(verticalAlignment = Alignment.CenterVertically) {
-        Checkbox(checked = checked, onCheckedChange = { checked = it })
+        Checkbox(checked = checked, onCheckedChange = { checked = it }, colors = CheckboxDefaults.colors(checkedColor = Color.Red))
         Text("Checkbox seleccionado: $checked")
     }
 }
